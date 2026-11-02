@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@source "./**/*.{js,ts,jsx,tsx}";
+
+:root {
+  color-scheme: dark;
+  background-color: #020712;
+  color: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  background: #020712;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 211, 238, 0.35) rgba(2, 7, 18, 0.7);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(2, 7, 18, 0.8);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.7), rgba(99, 102, 241, 0.7));
+  border-radius: 999px;
+}
+
+.ui-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform 170ms ease, box-shadow 200ms ease, border-color 200ms ease, background-color 200ms ease;
+  transform: translateZ(0);
+  overflow: hidden;
+}
+
+.ui-btn::after {
+  content: "";
+  position: absolute;
+  inset: -130% auto;
+  width: 48%;
+  transform: rotate(24deg) translateX(-220%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.24), transparent);
+  transition: transform 450ms ease;
+  pointer-events: none;
+}
+
+.ui-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px -22px rgba(56, 189, 248, 0.9);
+  border-color: rgba(125, 211, 252, 0.55);
+}
+
+.ui-btn:hover::after {
+  transform: rotate(24deg) translateX(300%);
+}
+
+.ui-btn:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.ui-btn-primary {
+  background: linear-gradient(135deg, rgba(45, 212, 191, 0.95), rgba(34, 211, 238, 0.95));
+  color: #05212c;
+  border-color: rgba(103, 232, 249, 0.65);
+}
+
+.ui-btn-secondary {
+  background: rgba(8, 47, 73, 0.52);
+  color: #dbeafe;
+}
+
+.ui-btn-ghost {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(71, 85, 105, 0.7);
+  color: #e2e8f0;
+}
+
+.ui-btn-live {
+  animation: livePulse 1.6s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.22);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(34, 211, 238, 0.04);
+  }
+}
+
+.panel-elevated {
+  box-shadow: 0 24px 50px -34px rgba(15, 23, 42, 0.92), inset 0 1px 0 rgba(148, 163, 184, 0.08);
+}

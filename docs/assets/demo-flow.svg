@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-label="Demo flow placeholder">
+  <rect width="1200" height="280" fill="#020617"/>
+  <text x="50" y="52" fill="#e2e8f0" font-size="28" font-family="Segoe UI, Arial">Conference Demo Flow (Placeholder)</text>
+  <g fill="#0f172a" stroke="#818cf8" stroke-opacity="0.7">
+    <rect x="50" y="100" width="200" height="90" rx="12"/>
+    <rect x="290" y="100" width="200" height="90" rx="12"/>
+    <rect x="530" y="100" width="200" height="90" rx="12"/>
+    <rect x="770" y="100" width="200" height="90" rx="12"/>
+    <rect x="1010" y="100" width="140" height="90" rx="12"/>
+  </g>
+  <g fill="#cbd5e1" font-size="14" font-family="Segoe UI, Arial">
+    <text x="98" y="150">Landing</text>
+    <text x="328" y="150">Dashboard</text>
+    <text x="586" y="150">Models</text>
+    <text x="838" y="150">Network Lab</text>
+    <text x="1040" y="150">About</text>
+  </g>
+  <g stroke="#22d3ee" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+        <polygon points="0 0, 10 3, 0 6" fill="#22d3ee"/>
+      </marker>
+    </defs>
+    <path d="M250 145 L290 145"/>
+    <path d="M490 145 L530 145"/>
+    <path d="M730 145 L770 145"/>
+    <path d="M970 145 L1010 145"/>
+  </g>
+</svg>
